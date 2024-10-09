@@ -1,0 +1,37 @@
+{
+  "name": "test-telegram",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start:ngrok": "ngrok http --domain=carefully-mature-meerkat.ngrok-free.app 3000",
+    "start:node": "node --no-warnings=ExperimentalWarning --loader ts-node/esm src/server.ts"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@mikro-orm/core": "^6.3.13",
+    "@mikro-orm/reflection": "^6.3.13",
+    "@mikro-orm/sqlite": "^6.3.13",
+    "axios": "^1.7.7",
+    "body-parser": "^1.20.3",
+    "express": "^4.21.0",
+    "ngrok": "^5.0.0-beta.2"
+  },
+  "devDependencies": {
+    "@mikro-orm/cli": "^6.3.13",
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.7.5",
+    "prettier": "^3.3.3",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.2"
+  },
+  "mikro-orm": {
+    "useTsNode": true,
+    "configPaths": [
+      "./src/mikro-orm.config.ts",
+      "./dist/mikro-orm.config.js"
+    ]
+  }
+}
