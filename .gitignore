@@ -1,2 +1,9 @@
-.env
+.idea
+.vscode
+.chrome
+
 node_modules
+my-db
+dist
+
+.env
